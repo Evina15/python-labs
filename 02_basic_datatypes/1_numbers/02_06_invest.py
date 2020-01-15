@@ -16,3 +16,4 @@ r = r_percent/100
 
 fv = i*(1+(r*t))
 print(int(fv))
+
