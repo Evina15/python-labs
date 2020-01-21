@@ -7,3 +7,12 @@ The output of your calculation should therefore look like this:
 
 The sum is: 5050
 '''
+
+n1 = int(input("Please enter a number: "))
+n2 = int(input("Please enter a number: "))
+
+sum = 0
+
+for x in range(n1, n2+1):
+    sum += x
+print("The sum is: " ,sum)
