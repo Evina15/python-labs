@@ -7,7 +7,12 @@ result_list = [('h', 'e', 'l', 'l', 'o'), ('w', 'o', 'r', 'l', 'd')]
 
 '''
 
-sentence = input("Please enter a sentence: ")
-my_list = tuple[(sentence,)]
-print(my_list)
+#str = input("Please enter a sentence: ")
+str = "hello world"
+splitted = str.split()
+print(splitted)
+arr = [tuple(list(splitted[0])), tuple(list(splitted[1]))]
+print(arr)
+
+#use split and loop and maybe using [0] index to iterate over the splitted
 

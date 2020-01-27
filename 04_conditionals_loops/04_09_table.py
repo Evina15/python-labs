@@ -8,3 +8,19 @@ Use a loop to print the following table to the console:
  40 41 42 43 44 45 46 47 48 49
 
 '''
+
+for a in range(0, 10):
+    print(a, end=" ")
+print()
+for b in range(10, 20):
+    print(b, end=" ")
+print()
+for c in range(20, 30):
+    print(c, end=" ")
+print()
+for d in range(30, 40):
+    print(d, end=" ")
+print()
+for e in range(40, 50):
+    print(e, end=" ")
+print()

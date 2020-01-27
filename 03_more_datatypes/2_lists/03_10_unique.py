@@ -6,7 +6,19 @@ unique_list = [55, 'hi', 4, 13]
 
 
 '''
-list1= [10, 20, 30, 40, 20, 50, 60, 40]
-my_set = set(list1)
-my_list = list(my_set)
-print(my_list)
+list1= [1, 2, 6, 55, 2, 'hi', 4, 6, 1, 13]
+
+my_dict = {}
+for x in list1:
+    my_dict[x] = my_dict.get(x, 0) + 1
+print(my_dict)
+
+list2 = []
+for key, value in my_dict.items():
+    if value == 1:
+        list2.append(key)
+print(list2)
+
+#for x in list2:
+#    list2.append(x)
+#    print(list2)

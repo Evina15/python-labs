@@ -5,5 +5,17 @@ occurrences.
 
 '''
 
-sentence = input("Please enter a sentence: ")
-print(sentence.split())
+
+str = input("Please enter a sentence: ")
+l = str.split()
+
+dict = dict((x,l.count(x)) for x in set(l))
+print(dict)
+
+max = max(dict, key=dict.get)
+print(max, dict[max])
+
+
+
+
+
