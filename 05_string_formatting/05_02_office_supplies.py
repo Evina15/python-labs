@@ -25,3 +25,8 @@ office = [
     {"full_name": "Creed Bratton", "item": "mung beans"},
     {"full_name": "Darryl Philbin", "item": "forklift"},
 ]
+
+for x in office:
+    myList = list(x.values())
+    nameSplit = myList[0].split()
+    print(f"{nameSplit[1].upper()}, {nameSplit[0]}{myList[1]:>30}")
