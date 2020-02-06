@@ -100,20 +100,23 @@ class College(Education):
         print(f"Uh oh you failed your last test. So you will have to study for another {self.duration} years")
 
 class HighSchool(Education):
-    def __init__(self, type, major, name, student, duration=1):
+    def __init__(self, type, major, name, students, duration=1):
         super().__init__(type, major)
         self.name = name
-        self.student = student
+        self.students = students
         self.duration = duration
 
     def __str__(self):
         return f"My daughter is in {self.type} now taking {self.major} subject." \
-               f"{self.name} is the best school in our city with {self.student} students." \
+               f"{self.name} is the best school in our city with {self.students} students." \
                f"She will stay in that school for {self.duration} years."
 
     def unpopular(self):
-        self.student -= 10
-        print(f"{self.name} were once a very popular school. Now they only have {self.student} of students.")
+        if self.students <= 10:
+            print(f"This {self.name} school has no student left!")
+        else:
+            self.students -= 10
+            print(f"{self.name} were once a very popular school. Now they only have {self.students} of students.")
 
 class JuniorHighSchool(HighSchool):
     pass
@@ -133,7 +136,7 @@ tafe = College("vocational", "hairdressing", 3)
 print(tafe)
 tafe.extra_study()
 
-bali_school = HighSchool("senior high school", "math", "Bali School", 50, 3)
+bali_school = HighSchool("senior high school", "math", "Bali School", 5, 3)
 print(bali_school)
 bali_school.unpopular()
 

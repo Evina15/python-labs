@@ -51,9 +51,10 @@ class House:
         return f"Someday I would love to buy a {self.type} with {self.bedroom} bedroom and {self.bathroom} bathroom."
 
     def __add__(self, other):
-        total_bedroom = int(self.bedroom) + int(other.bedroom)
-        total_bathroom = int(self.bathroom) + int(other.bathroom)
+        total_bedroom = self.bedroom + other.bedroom
+        total_bathroom = self.bathroom + other.bathroom
         return f"This property has {total_bedroom} bedroom and {total_bathroom} bathroom."
+
 
 class Food:
     served_at = "restaurant"
@@ -75,14 +76,16 @@ print(dinosaur)
 dinosaur.extinct()
 print(dinosaur.food)
 
-villa = House("villa", 2, 2)
-print(villa)
-villa.sale()
-int(villa.bedroom) + 3
-int(villa.bathroom) + 2
-
 tomyum = Food("tomyom", "Thailand", "spicy")
 print(tomyum)
 tomyum.specials()
 print(tomyum.cooking_time)
+
+villa = House("villa", 2, 2)
+print(villa)
+villa.sale()
+supervilla = villa+villa
+print(supervilla)
+
+
 
