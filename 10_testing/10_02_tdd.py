@@ -8,3 +8,16 @@ fail and write tests that will check and prevent failure.
 You do not need to implement the actual functions after writing the tests but you may.
 
 '''
+
+import unittest
+
+class test_simple_calculation(unittest.TestCase):
+    def test_add_two_number(self):
+        self.assertEqual(adding_number(2,2),4)
+
+    def test_input_not_number(self):
+        with self.assertRaises(ValueError):
+            adding_number("two", "three")
+
+if __name__ == "__main__":
+    unittest.main()
