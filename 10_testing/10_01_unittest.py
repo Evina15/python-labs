@@ -14,7 +14,8 @@ def divide_multiply(x, y, z):
         result_ = x/(y*z)
         return result_
     except ZeroDivisionError:
-        return "This will cause error because either x or y is 0."
+        raise
+        #return "This will cause error because either x or y is 0."
 
 class test_divide_multiply(unittest.TestCase):
     def test_correct_results(self):
@@ -26,7 +27,7 @@ class test_divide_multiply(unittest.TestCase):
 
     def test_raises_argument_not_found(self):
         with self.assertRaises(TypeError):
-            divide_multiply(2, 3)
+            divide_multiply(2, 3, 4)
 
 
 if __name__ == "__main__":
