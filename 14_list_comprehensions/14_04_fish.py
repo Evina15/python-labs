@@ -7,3 +7,6 @@ Tip: Use an if statement in the listcomp
 '''
 
 fish_tuple = ('blowfish', 'clownfish', 'catfish', 'octopus')
+
+fish_list = [f for f in fish_tuple if f.endswith("fish")]
+print(fish_list)
